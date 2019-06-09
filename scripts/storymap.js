@@ -110,6 +110,34 @@ $(window).on('load', function() {
     // Load tiles
     addBaseMap();
 
+    // Add buffer layer
+    $.getJSON("geojson/buffer.geojson", function (data) {
+      geoJsonLayer = L.geoJson(data, {
+        style: {
+          fillColor: "#66FF00", dashArray: "5", fillOpacity: 0.01
+        }
+      }).addTo(map);
+    });
+
+    // Add custom layers
+    $.getJSON("geojson/core-network.geojson", function (data) {
+      geoJsonLayer = L.geoJson(data, {
+        style: function(feature) {
+          switch (feature.properties.Type) {
+              case 'Bicycle Boulevard': return {color: "#66FF00", dashArray: "5", weight: 4, opacity: 0.9};
+              case 'Shared Use Path':   return {color: "#FF4040", dashArray: "3", weight: 4, opacity: 0.9};
+              case 'Cycle Track':       return {color: "#1f78b4", dashArray: "4", weight: 4, opacity: 0.9};
+          }
+        },
+        onEachFeature: function(feature, layer) {
+              if (feature.properties && feature.properties.Descript) {
+                  layer.bindPopup("<b>" + feature.properties.Name + "</b><br />" + feature.properties.Descript);
+              }
+          }
+      }).addTo(map);
+    });
+
+
     // Add zoom controls if needed
     if (getSetting('_zoomControls') !== 'off') {
       L.control.zoom({
