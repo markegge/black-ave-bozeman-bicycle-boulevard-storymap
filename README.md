@@ -3,8 +3,8 @@ Customize your Leaflet story map with linked Google Sheets template and scrollin
 Supports images, audio and video embeddings, and Leaflet TileLayer/geojson overlays.
 
 ## [Live Demo](https://markegge.github.io/black-ave-bozeman-bicycle-boulevard-storymap/)
-- The map is hosted by GitHub and can be found at http://datavizforall.github.io/leaflet-storymaps-with-google-sheets/index.html
-- Google Sheets template https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/
+- The map is hosted by GitHub and can be found at https://github.com/markegge/black-ave-bozeman-bicycle-boulevard-storymap/
+- Google Sheets template https://docs.google.com/spreadsheets/d/1DjJSvgyqXNFHFyFbt0W3XszPfzDTdNQsqU2CvcIPqKI/edit#gid=0
 
 ## Create Your Own
 - See step-by-step tutorial in *Data Visualization for All* https://datavizforall.org/leaflet-storymaps-with-google-sheets.html
