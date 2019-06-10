@@ -66,16 +66,6 @@ $(window).on('load', function() {
     var options = mapData.sheets(constants.optionsSheetName).elements;
     createDocumentSettings(options);
 
-    /* Change narrative width */
-    /*
-    narrativeWidth = parseInt(getSetting('_narrativeWidth'));
-    if (narrativeWidth > 0 && narrativeWidth < 100) {
-      var mapWidth = 100 - narrativeWidth;
-
-      $('#narration, #title').css('width', narrativeWidth + 'vw');
-      $('#map').css('width', mapWidth + 'vw');
-    } */
-
     var chapterContainerMargin = 70;
 
     document.title = getSetting('_mapTitle');
@@ -100,7 +90,7 @@ $(window).on('load', function() {
         style: function(feature) {
           switch (feature.properties.Type) {
               case 'Bicycle Boulevard': return {color: "#66FF00", dashArray: "5", weight: 4, opacity: 0.9};
-              case 'Shared Use Path':   return {color: "#FF4040", dashArray: "3", weight: 4, opacity: 0.9};
+              case 'Shared Use Path':   return {color: "#7570b3", dashArray: "3", weight: 4, opacity: 0.9};
               case 'Cycle Track':       return {color: "#1f78b4", dashArray: "4", weight: 4, opacity: 0.9};
           }
         },
